@@ -1,0 +1,832 @@
+<title>Kevin &amp; Wendy Wedding</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Kevin & Wendy Wedding Party · 2026.11.28 · 高雄 一嶼所在 二號島 西灣">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Pinyon+Script&family=Noto+Serif+TC:wght@400;500;600&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: an engraved invitation unfolding down one column; arch-topped photo frames echo
+   the bastion arches and villa windows in the photos. Single light look, chosen on purpose. */
+:root {
+  --paper: #f6f3ee;        /* limestone ivory */
+  --paper-deep: #ece6dc;   /* shaded stone */
+  --ink: #23303f;          /* deep navy ink */
+  --ink-soft: #5a6573;
+  --blue: #6f8fb0;         /* the dusty blue of the gown and ribbons */
+  --blue-deep: #4b6a8c;
+  --olive: #7c8466;        /* garden cypress */
+  --rule: #c9bfae;
+
+  --f-display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --f-script: "Pinyon Script", "Snell Roundhand", cursive;
+  --f-body: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --f-label: "Jost", "Futura", "Helvetica Neue", sans-serif;
+
+  --arch: 999px 999px 0 0;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+
+a { color: var(--blue-deep); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.label {
+  font-family: var(--f-label);
+  font-size: 12px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  height: clamp(520px, 86vh, 860px);
+  overflow: hidden;
+  color: #fff;
+}
+.hero img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 52% 50%;
+  animation: settle 2.4s ease-out both;
+}
+@keyframes settle { from { transform: scale(1.06); } to { transform: scale(1); } }
+.hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(20,28,40,.38) 0%, rgba(20,28,40,0) 34%, rgba(20,28,40,0) 58%, rgba(20,28,40,.55) 100%);
+}
+.hero-text {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  padding-block: 0 clamp(36px, 7vh, 72px);
+  text-align: center;
+}
+.hero-text .label { color: rgba(255,255,255,.9); }
+.names {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(54px, 11vw, 128px);
+  line-height: 1;
+  letter-spacing: -.01em;
+  margin: 14px 0 6px;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(0,0,0,.25);
+}
+.names .amp {
+  font-family: var(--f-script);
+  font-size: .78em;
+  padding: 0 .08em;
+  position: relative; top: .04em;
+}
+.hero-sub {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 28px);
+  margin: 0;
+}
+.hero-date {
+  margin-top: 18px;
+  font-family: var(--f-label);
+  font-size: 14px;
+  letter-spacing: .4em;
+}
+
+/* ---------- Ornament ---------- */
+.flourish {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  color: var(--rule);
+}
+.flourish::before, .flourish::after {
+  content: ""; height: 1px; width: min(120px, 22vw); background: currentColor;
+}
+.flourish svg { width: 22px; height: 22px; fill: var(--blue); }
+
+/* ---------- Sections ---------- */
+section { padding-block: clamp(64px, 10vw, 112px); }
+.sec-head { text-align: center; display: grid; gap: 10px; margin-bottom: clamp(36px, 6vw, 56px); }
+.sec-head h2 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(34px, 5vw, 50px);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.sec-head h2 .zh { display: block; font-family: var(--f-body); font-size: .42em; letter-spacing: .3em; color: var(--ink-soft); margin-top: 8px; }
+
+/* ---------- Invitation + countdown ---------- */
+.invite { text-align: center; }
+.invite .script {
+  font-family: var(--f-script);
+  font-size: clamp(34px, 5vw, 46px);
+  color: var(--blue-deep);
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+.invite p.lead {
+  max-width: 34em; margin: 0 auto;
+  color: var(--ink-soft);
+}
+.bigdate {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: clamp(14px, 3vw, 28px);
+  margin: 36px auto 8px;
+  font-family: var(--f-display);
+}
+.bigdate .side {
+  font-family: var(--f-label);
+  font-size: 13px; letter-spacing: .3em; text-transform: uppercase;
+  padding-block: 8px;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  min-width: 6.5em;
+}
+.bigdate .day { font-size: clamp(64px, 10vw, 96px); line-height: 1; }
+.bigdate-zh { color: var(--ink-soft); margin: 4px 0 0; letter-spacing: .12em; }
+
+.countdown {
+  margin: 44px auto 0;
+  max-width: 620px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--rule);
+  outline: 1px solid var(--rule);
+  outline-offset: 5px;
+  background: #fbf9f5;
+}
+.countdown div { padding: 20px 6px 16px; display: grid; gap: 4px; }
+.countdown div + div { border-left: 1px solid var(--rule); }
+.countdown b {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(34px, 7vw, 54px);
+  line-height: 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.countdown span { font-family: var(--f-label); font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--ink-soft); }
+.countdown-cap { margin: 22px 0 0; font-size: 14px; color: var(--ink-soft); letter-spacing: .08em; }
+
+/* ---------- Schedule ---------- */
+.schedule-bg { background: var(--paper-deep); }
+.schedule {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+.arch-photo {
+  border-radius: var(--arch);
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  max-width: 100%;
+  border: 6px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--rule);
+}
+.arch-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 5.2em minmax(0, 1fr);
+  gap: 20px;
+  padding-block: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+.timeline li:first-child { border-top: 1px solid var(--rule); }
+.timeline time {
+  font-family: var(--f-display);
+  font-size: 32px;
+  line-height: 1.1;
+  font-variant-numeric: lining-nums;
+}
+.timeline h3 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: .12em; }
+.timeline h3 small { font-family: var(--f-display); font-style: italic; font-weight: 400; font-size: 16px; letter-spacing: 0; color: var(--ink-soft); margin-left: 8px; }
+.timeline p { margin: 4px 0 0; color: var(--ink-soft); font-size: 15px; }
+.tag {
+  display: inline-block;
+  font-family: var(--f-body);
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--olive);
+  border: 1px solid currentColor;
+  padding: 0 8px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: 3px;
+}
+
+.notes { margin-top: 28px; display: grid; gap: 14px; }
+.note {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.note svg { width: 22px; height: 22px; margin-top: 3px; stroke: var(--blue-deep); fill: none; stroke-width: 1.4; }
+.note strong { font-weight: 600; }
+
+/* ---------- Gallery ---------- */
+.tabs {
+  display: flex; justify-content: center; gap: 0;
+  margin: 0 auto clamp(24px, 4vw, 36px);
+  width: fit-content;
+  border: 1px solid var(--ink);
+}
+.tab {
+  font-family: var(--f-body); font-size: 16px; letter-spacing: .3em;
+  padding: 10px 30px 10px calc(30px + .3em);
+  background: transparent; color: var(--ink); border: 0; cursor: pointer;
+  transition: background .3s, color .3s;
+}
+.tab + .tab { border-left: 1px solid var(--ink); }
+.tab[aria-selected="true"] { background: var(--ink); color: var(--paper); }
+.tab:hover:not([aria-selected="true"]) { background: var(--paper-deep); }
+/* Justified rows: each photo grows in proportion to its aspect ratio, so nothing is cropped */
+.gallery { display: flex; flex-wrap: wrap; gap: clamp(8px, 1.2vw, 14px); }
+.gallery::after { content: ""; flex-grow: 999999; }
+.gallery figure {
+  margin: 0; overflow: hidden; background: var(--paper-deep); cursor: zoom-in;
+  flex: calc(var(--r) * 100) 1 calc(var(--r) * 240px);
+  aspect-ratio: var(--r);
+  max-width: 100%;
+}
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s ease; }
+.gallery figure:hover img { transform: scale(1.03); }
+
+.lightbox {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(20, 26, 34, .94);
+  display: grid; place-items: center;
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+}
+.lightbox img { max-width: min(100%, 1400px); max-height: 86vh; width: auto; height: auto; object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+.lb-btn {
+  position: absolute; background: none; border: 0; color: #f6f3ee; cursor: pointer;
+  font-family: var(--f-display); font-size: 40px; line-height: 1; padding: 12px 16px; opacity: .8;
+}
+.lb-btn:hover { opacity: 1; }
+.lb-close { top: max(8px, env(safe-area-inset-top, 0px)); right: max(8px, env(safe-area-inset-right, 0px)); font-size: 34px; }
+.lb-prev { left: max(4px, env(safe-area-inset-left, 0px)); top: 50%; transform: translateY(-50%); }
+.lb-next { right: max(4px, env(safe-area-inset-right, 0px)); top: 50%; transform: translateY(-50%); }
+.lb-count { position: absolute; bottom: max(14px, env(safe-area-inset-bottom, 0px)); left: 0; right: 0; text-align: center; color: rgba(246,243,238,.75); font-family: var(--f-label); font-size: 12px; letter-spacing: .3em; }
+.gallery-cap {
+  text-align: center; margin: 28px 0 0;
+  font-family: var(--f-display); font-style: italic; color: var(--ink-soft); font-size: 18px;
+}
+
+/* ---------- Venue ---------- */
+.venue {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+.venue-photo { aspect-ratio: 3 / 2; overflow: hidden; max-width: 100%; }
+.venue-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.venue-city { font-family: var(--f-label); letter-spacing: .3em; font-size: 13px; color: var(--ink-soft); }
+.venue h3 {
+  margin: 6px 0 4px;
+  font-size: clamp(26px, 3.6vw, 34px);
+  font-weight: 500;
+  letter-spacing: .14em;
+  line-height: 1.4;
+}
+.venue h3 span { display: block; font-size: .62em; letter-spacing: .2em; color: var(--blue-deep); }
+.venue .addr { color: var(--ink-soft); margin: 14px 0 26px; font-size: 15px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 26px;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-family: var(--f-label);
+  font-size: 13px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  transition: background .3s;
+}
+.btn:hover { background: var(--blue-deep); }
+.btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+
+/* ---------- Transport ---------- */
+.transport-bg { background: var(--paper-deep); }
+.transport {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 3vw, 32px);
+}
+.card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: clamp(24px, 4vw, 40px);
+  min-width: 0;
+}
+.card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+.card-head svg { width: 30px; height: 30px; stroke: var(--blue-deep); fill: none; stroke-width: 1.3; flex: none; }
+.card-head h3 { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: .16em; line-height: 1.3; }
+.card-head h3 small { display: block; font-family: var(--f-label); font-weight: 400; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft); }
+.card dl { margin: 0; display: grid; gap: 16px; }
+.card dt { font-weight: 600; letter-spacing: .1em; font-size: 15px; }
+.card dd { margin: 2px 0 0; color: var(--ink-soft); font-size: 15px; }
+.tbd { color: var(--blue); font-style: italic; }
+.card dd strong { color: var(--ink); font-weight: 600; }
+.bus { list-style: none; margin: 4px 0 8px; padding: 0; display: grid; gap: 6px; }
+.bus li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.bus-from { min-width: 5.5em; color: var(--ink); }
+.route {
+  font-family: var(--f-label); font-size: 13px; letter-spacing: .06em;
+  padding: 1px 10px; border-radius: 999px;
+  border: 1px solid var(--blue); color: var(--blue-deep); background: #fbf9f5;
+}
+a.route { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; transition: background .3s, color .3s; }
+a.route .tt { font-family: var(--f-body); font-size: 11px; letter-spacing: .08em; opacity: .75; }
+a.route .tt::after { content: " ↗"; }
+a.route:hover { background: var(--blue-deep); color: var(--paper); border-color: var(--blue-deep); }
+.bus-hint { font-size: 13px; }
+.copy-line { display: block; color: var(--ink); margin: 2px 0 10px; user-select: all; }
+.copy-btn {
+  font-family: var(--f-label); font-size: 12px; letter-spacing: .2em;
+  padding: 7px 16px; cursor: pointer;
+  background: transparent; color: var(--ink); border: 1px solid var(--ink);
+  transition: background .3s, color .3s;
+}
+.copy-btn:hover { background: var(--ink); color: var(--paper); }
+.walk { margin-top: clamp(32px, 5vw, 48px); background: var(--paper); border: 1px solid var(--rule); padding: clamp(20px, 3.5vw, 36px); }
+.walk-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 20px; }
+.walk-head h3 { margin: 0; font-size: 21px; font-weight: 600; letter-spacing: .16em; line-height: 1.3; }
+.walk-head h3 small { display: block; font-family: var(--f-label); font-weight: 400; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft); }
+.btn-line { background: transparent; color: var(--ink); border: 1px solid var(--ink); padding: 10px 18px; font-size: 12px; }
+.btn-line:hover { background: var(--ink); color: var(--paper); }
+.walk-body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: clamp(16px, 3vw, 32px); align-items: start; }
+.walk-map svg { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.m-tunnel { fill: none; stroke: var(--blue-deep); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 2 16; }
+.pin text { fill: #fff; font-family: var(--f-label); font-size: 26px; font-weight: 500; text-anchor: middle; }
+.pin { cursor: pointer; outline: none; }
+.pin circle { fill: var(--blue-deep); stroke: #fff; stroke-width: 5; transition: fill .2s, r .2s; filter: drop-shadow(0 2px 4px rgba(0,0,0,.3)); }
+.pin:hover circle, .pin:focus-visible circle { fill: var(--ink); }
+.pin.on circle { fill: var(--ink); r: 32; }
+.walk-note { margin: 10px 0 0; font-size: 13px; color: var(--ink-soft); letter-spacing: .06em; text-align: center; }
+.walk-view { margin: 0; display: grid; gap: 14px; }
+.walk-view img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: var(--paper-deep); }
+.walk-view figcaption { display: grid; gap: 4px; }
+.walk-step { font-family: var(--f-label); font-size: 12px; letter-spacing: .3em; color: var(--blue-deep); }
+.walk-view strong { font-size: 18px; letter-spacing: .12em; font-weight: 600; }
+.walk-view p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+.walk-nav { display: flex; gap: 8px; margin-top: 8px; }
+.walk-nav button { flex: 1; font-family: var(--f-body); font-size: 14px; letter-spacing: .1em; padding: 8px 10px; background: transparent; color: var(--ink); border: 1px solid var(--rule); cursor: pointer; }
+.walk-nav button:hover { border-color: var(--ink); }
+@media (max-width: 760px) {
+  .walk-body { grid-template-columns: minmax(0, 1fr); }
+  .walk-view img { aspect-ratio: 4 / 3; }
+}
+.route-map { margin: clamp(24px, 4vw, 40px) 0 0; }
+.route-map a { display: block; overflow-x: auto; background: #fff; border: 1px solid var(--rule); padding: 8px; }
+.route-map img { display: block; width: 100%; min-width: 640px; max-width: none; height: auto; }
+.route-map figcaption { text-align: center; margin-top: 12px; font-size: 14px; color: var(--ink-soft); letter-spacing: .1em; }
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding-block: clamp(64px, 10vw, 104px);
+  display: grid; gap: 14px;
+}
+footer .names { color: var(--ink); text-shadow: none; font-size: clamp(44px, 8vw, 76px); margin: 0; }
+footer .names .amp { color: var(--blue-deep); }
+footer p { margin: 0; color: var(--ink-soft); letter-spacing: .14em; font-size: 14px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .schedule, .venue, .transport { grid-template-columns: minmax(0, 1fr); }
+  .schedule .arch-photo { max-width: 300px; margin: 0 auto; }
+  .gallery figure { flex-basis: calc(var(--r) * 130px); }
+  .timeline li { grid-template-columns: 4.4em minmax(0, 1fr); gap: 14px; }
+  .timeline time { font-size: 26px; }
+  .bigdate .side { min-width: 0; font-size: 11px; letter-spacing: .2em; }
+}
+@media (max-width: 420px) {
+  .countdown div { padding: 16px 2px 12px; }
+  .countdown span { font-size: 10px; letter-spacing: .14em; }
+}
+</style>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <img src="photos/1.jpg" alt="Kevin 與 Wendy 在布達佩斯漁人堡，背景是多瑙河與國會大廈">
+  <div class="hero-text wrap">
+    <div class="label">Together with their families</div>
+    <h1 class="names">Kevin<span class="amp">&amp;</span>Wendy</h1>
+    <p class="hero-sub">Wedding Party</p>
+    <div class="hero-date">2026 · 11 · 28</div>
+  </div>
+</header>
+
+<!-- ===== Invitation + countdown ===== -->
+<section class="invite">
+  <div class="wrap">
+    <p class="script">Save the Date</p>
+    <p class="lead">誠摯邀請您，在高雄西灣的海風與夕陽裡，<br>與我們一起見證這個重要的日子。</p>
+
+    <div class="bigdate" aria-label="2026 年 11 月 28 日 星期六">
+      <div class="side">Saturday</div>
+      <div class="day">28</div>
+      <div class="side">Nov 2026</div>
+    </div>
+    <p class="bigdate-zh">2026 年 11 月 28 日（六）</p>
+
+    <div class="countdown" id="countdown" role="timer" aria-live="off">
+      <div><b id="cd-d">--</b><span>Days</span></div>
+      <div><b id="cd-h">--</b><span>Hours</span></div>
+      <div><b id="cd-m">--</b><span>Mins</span></div>
+      <div><b id="cd-s">--</b><span>Secs</span></div>
+    </div>
+    <p class="countdown-cap" id="cd-cap">距離證婚儀式開始</p>
+  </div>
+</section>
+
+<div class="flourish" aria-hidden="true">
+  <svg viewBox="0 0 24 24"><path d="M12 2c.9 3.6 2.4 5.1 6 6-3.6.9-5.1 2.4-6 6-.9-3.6-2.4-5.1-6-6 3.6-.9 5.1-2.4 6-6Zm0 13c.5 2 1.3 2.8 3.3 3.3-2 .5-2.8 1.3-3.3 3.3-.5-2-1.3-2.8-3.3-3.3 2-.5 2.8-1.3 3.3-3.3Z"/></svg>
+</div>
+
+<!-- ===== Schedule ===== -->
+<section class="schedule-bg" id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">The Day</span>
+      <h2>Order of the Day<span class="zh">婚禮流程</span></h2>
+    </div>
+
+    <div class="schedule">
+      <div class="arch-photo"><img src="photos/4.jpg" alt="新人在白色歐式小屋前合照" loading="lazy"></div>
+
+      <div>
+        <ol class="timeline">
+          <li>
+            <time datetime="2026-11-28T16:00+08:00">16:00</time>
+            <div>
+              <h3>證婚<small>Ceremony</small><span class="tag">自由參加</span></h3>
+              <p>參加證婚的親友，15:30 後即可抵達入座。</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-11-28T17:00+08:00">17:00</time>
+            <div>
+              <h3>迎賓<small>Reception</small></h3>
+              <p>小點與飲品，拍照、聊天、等待開席。</p>
+            </div>
+          </li>
+          <li>
+            <time datetime="2026-11-28T18:00+08:00">18:00</time>
+            <div>
+              <h3>晚宴<small>Dinner</small></h3>
+              <p>晚宴正式開始。</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="notes">
+          <div class="note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><strong>證婚觀禮</strong>：證婚為自由參加，想一起見證的朋友，可於 15:30 抵達。</div>
+          </div>
+          <div class="note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V5h8v5M10 7.5h4"/></svg>
+            <div><strong>當天是投票日</strong>：建議大家先回戶籍地投完票，再輕鬆前來參加！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Venue ===== -->
+<section id="venue">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">The Venue</span>
+      <h2>Where<span class="zh">婚禮地點</span></h2>
+    </div>
+
+    <div class="venue">
+      <div class="venue-photo"><img src="photos/8.jpg" alt="" loading="lazy"></div>
+      <div>
+        <div class="venue-city">KAOHSIUNG · 高雄</div>
+        <h3>一嶼所在<span>二號島 · 西灣</span></h3>
+        <p class="addr">SuKiNa Island｜2號島：百年海域<br>高雄市鼓山區桃源里蓮海路 90 號 2 樓</p>
+        <a class="btn" href="https://maps.app.goo.gl/e5bt8LVKgtfusAyb6" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Google Map
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Transport ===== -->
+<section class="transport-bg" id="transport">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Getting There</span>
+      <h2>Directions<span class="zh">交通資訊</span></h2>
+    </div>
+
+    <div class="transport">
+      <article class="card">
+        <div class="card-head">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="5" width="16" height="18" rx="3"/><path d="M8 15h16M12 27l2-4M20 27l-2-4"/><circle cx="12" cy="19" r="1"/><circle cx="20" cy="19" r="1"/></svg>
+          <h3><small>Public Transit</small>大眾運輸</h3>
+        </div>
+        <dl>
+          <div><dt>捷運 / 輕軌</dt><dd>搭到<strong>哈瑪星站</strong>，從捷運 1 號出口出站，步行或轉乘公車。</dd></div>
+          <div><dt>公車</dt><dd>
+            <ul class="bus">
+              <li><span class="bus-from">高鐵站</span><a class="route" href="https://ibusplus.tbkc.gov.tw/routeInfo?routeId=852&amp;routeName=%E7%B4%8552&amp;routeSort=red&amp;lat=22.6337242126&amp;lng=120.285774231" target="_blank" rel="noopener">紅 52<span class="tt">時刻表</span></a><a class="route" href="https://ibusplus.tbkc.gov.tw/routeInfo?routeId=9011&amp;routeName=%E6%A9%981&amp;routeSort=orange" target="_blank" rel="noopener">橘 1<span class="tt">時刻表</span></a></li>
+              <li><span class="bus-from">哈瑪星站</span><a class="route" href="https://ibusplus.tbkc.gov.tw/routeInfo?routeId=9011&amp;routeName=%E6%A9%981&amp;routeSort=orange" target="_blank" rel="noopener">橘 1<span class="tt">時刻表</span></a></li>
+            </ul>
+            <span class="bus-hint">點路線可查看即時動態與時刻表。</span><br>
+            皆搭乘至<strong>「中山大學行政大樓」站</strong>下車後步行。
+          </dd></div>
+          <div><dt>計程車 / Uber</dt><dd>
+            目的地請輸入：<br>
+            <span class="copy-line" id="taxi-dest">SuKiNa Island｜2號島：百年海域<br>高雄市鼓山區桃源里蓮海路 90 號 2 樓</span>
+            <button class="copy-btn" id="copy-addr" type="button">複製地址</button>
+          </dd></div>
+        </dl>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 20l2.2-6.6A2 2 0 0 1 10.1 12h11.8a2 2 0 0 1 1.9 1.4L26 20v5h-3v-2H9v2H6z"/><circle cx="10.5" cy="20" r="1.4"/><circle cx="21.5" cy="20" r="1.4"/><path d="M5 16h2M25 16h2"/></svg>
+          <h3><small>By Car</small>停車資訊</h3>
+        </div>
+        <dl>
+          <div><dt>停車位置</dt><dd>停在中山大學校內，路線請見下方地圖。</dd></div>
+          <div><dt>停車費用</dt><dd>校內停車一次 90 元，不限時間。</dd></div>
+        </dl>
+      </article>
+    </div>
+
+
+    <div class="walk">
+      <div class="walk-head">
+        <h3>從哈瑪星站步行<small>Walking from Hamasen Station</small></h3>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%8D%B7%E9%81%8B%E5%93%88%E7%91%AA%E6%98%9F%E7%AB%99&amp;destination=%E8%A5%BF%E5%AD%90%E7%81%A3%E6%B5%B7%E5%9F%9F%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83&amp;travelmode=walking" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Google Map 步行導航
+        </a>
+      </div>
+      <div class="walk-body">
+        <div class="walk-map">
+          <svg viewBox="0 0 1486 1016" role="img" aria-label="從西子灣隧道步行到會場的路線圖">
+            <image href="photos/walk/map.jpg" width="1486" height="1016"/>
+            <path class="m-tunnel" d="M742,705 L1375,888"/>
+            <g class="pin" data-i="0" tabindex="0" role="button" aria-label="第 1 站：西子灣隧道" transform="translate(1375 888)"><circle r="26"/><text y="9">1</text></g>
+            <g class="pin" data-i="1" tabindex="0" role="button" aria-label="第 2 站：隧道出口" transform="translate(705 700)"><circle r="26"/><text y="9">2</text></g>
+            <g class="pin" data-i="2" tabindex="0" role="button" aria-label="第 3 站：椰子樹路口" transform="translate(350 692)"><circle r="26"/><text y="9">3</text></g>
+            <g class="pin" data-i="3" tabindex="0" role="button" aria-label="第 4 站：蓮海路彎道" transform="translate(268 658)"><circle r="26"/><text y="9">4</text></g>
+            <g class="pin" data-i="4" tabindex="0" role="button" aria-label="第 5 站：抵達會場" transform="translate(150 285)"><circle r="26"/><text y="9">5</text></g>
+          </svg>
+          <p class="walk-note">點數字可以看那一站的實景　·　地圖：Google Maps</p>
+        </div>
+        <figure class="walk-view" aria-live="polite">
+          <img id="walk-img" src="photos/walk/w1.jpg" alt="">
+          <figcaption>
+            <div class="walk-step"><span id="walk-num">1</span> / 5</div>
+            <strong id="walk-title">西子灣隧道</strong>
+            <p id="walk-desc"></p>
+            <div class="walk-nav">
+              <button type="button" id="walk-prev" aria-label="上一站">‹ 上一站</button>
+              <button type="button" id="walk-next" aria-label="下一站">下一站 ›</button>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <ol class="walk-data" hidden>
+          <li data-src="photos/walk/w1.jpg" data-title="西子灣隧道">從哈瑪星站 1 號出口往西子灣方向走到隧道入口，穿過隧道就會進入中山大學校區。</li>
+          <li data-src="photos/walk/w2.jpg" data-title="隧道出口">出隧道後，會看到紅磚建築。</li>
+          <li data-src="photos/walk/w4.jpg" data-title="椰子樹路口">沿著這條路走到底，看到椰子樹和海邊的路口就右轉，進入蓮海路。</li>
+          <li data-src="photos/walk/w5.jpg" data-title="蓮海路彎道">沿著蓮海路的彎道往北走，海在左手邊，會場就在前方。</li>
+          <li data-src="photos/walk/w7.jpg" data-title="抵達會場">西子灣海域運動中心，婚禮在 2 樓的 SuKiNa Island。</li>
+      </ol>
+    </div>
+
+    <figure class="route-map">
+      <a href="photos/parking-map.jpg" target="_blank" rel="noopener">
+        <img src="photos/parking-map.jpg" alt="中山大學停車與步行至會場路線圖：左為停車場分布，中為小客車與機車停車場位置，右為 1 到 6 步實景路線" loading="lazy">
+      </a>
+      <figcaption>開車：停車與步行到會場路線圖　·　點圖可放大查看</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Our Story in Frames</span>
+      <h2>Gallery<span class="zh">婚紗照</span></h2>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="婚紗照分類">
+      <button class="tab" id="tab-west" type="button" role="tab" aria-selected="true" aria-controls="panel-west">西式</button>
+      <button class="tab" id="tab-east" type="button" role="tab" aria-selected="false" aria-controls="panel-east">中式</button>
+    </div>
+
+    <div class="gallery" id="panel-west" role="tabpanel" aria-labelledby="tab-west">
+      <figure style="--r:0.6667"><img src="photos/17.jpg" alt="新人在漁人堡拱廊前，背景是國會大廈" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/22.jpg" alt="新人在漁人堡塔樓內的拱窗前合照" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/21.jpg" alt="新人在漁人堡露台上，新娘回眸" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/19.jpg" alt="從拱門下望向漁人堡塔樓與階梯上的新人" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/18.jpg" alt="新人站在漁人堡的石階上" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/20.jpg" alt="新人牽手走向布達城堡的巴洛克拱門" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/2.jpg" alt="新人在紅磚牆窗邊的桌旁對坐" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/3.jpg" alt="新娘倚著桌子的半身照" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/4.jpg" alt="新人在草地上開心合照" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/6.jpg" alt="新郎彎腰看著坐在藍色木門前的新娘" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/5.jpg" alt="新郎手捧花束的獨照" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/14.jpg" alt="新娘的背影與長裙擺" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/13.jpg" alt="從高處拍下新人在小屋前草地上共舞" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/11.jpg" alt="穿藍色禮服的新娘與新郎在花園小徑相望" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/12.jpg" alt="新郎站在玻璃溫室拱門前，新娘手持捧花回望" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/7.jpg" alt="新娘穿藍色禮服與新郎在小屋前相擁" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/9.jpg" alt="新郎將新娘抱起" loading="lazy"></figure>
+    </div>
+    <div class="gallery" id="panel-east" role="tabpanel" aria-labelledby="tab-east" hidden>
+      <figure style="--r:0.6667"><img src="photos/23.jpg" alt="新人穿著中式囍服在紅色背景前合照" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/24.jpg" alt="新人在梅花屏風前舉杯對望" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/26.jpg" alt="新人在大紅囍字前牽著紅綢" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/25.jpg" alt="新人在圓形月洞門兩側相望" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/30.jpg" alt="新娘從涼亭拋出繡球，新郎伸手去接" loading="lazy"></figure>
+      <figure style="--r:0.6667"><img src="photos/31.jpg" alt="新人在涼亭下手持春聯" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/27.jpg" alt="新人在庭園欄杆旁相望" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/28.jpg" alt="新人提著紅燈籠走過石橋" loading="lazy"></figure>
+      <figure style="--r:1.5000"><img src="photos/29.jpg" alt="新人站在金柱殿堂前的階梯上" loading="lazy"></figure>
+    </div>
+
+    <p class="gallery-cap">From Budapest to the garden cottage, and now to you.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="照片檢視">
+  <img id="lb-img" src="" alt="">
+  <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="關閉">×</button>
+  <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="上一張">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="下一張">›</button>
+  <div class="lb-count" id="lb-count"></div>
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap" style="display:grid;gap:14px">
+    <div class="flourish" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2c.9 3.6 2.4 5.1 6 6-3.6.9-5.1 2.4-6 6-.9-3.6-2.4-5.1-6-6 3.6-.9 5.1-2.4 6-6Zm0 13c.5 2 1.3 2.8 3.3 3.3-2 .5-2.8 1.3-3.3 3.3-.5-2-1.3-2.8-3.3-3.3 2-.5 2.8-1.3 3.3-3.3Z"/></svg>
+    </div>
+    <p class="names">Kevin<span class="amp">&amp;</span>Wendy</p>
+    <p>2026.11.28 · 高雄 一嶼所在 二號島 西灣</p>
+    <p>期待與你相見</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // 證婚儀式開始時間（台灣時間）
+  var target = new Date("2026-11-28T16:00:00+08:00").getTime();
+  var el = {
+    d: document.getElementById("cd-d"),
+    h: document.getElementById("cd-h"),
+    m: document.getElementById("cd-m"),
+    s: document.getElementById("cd-s"),
+    cap: document.getElementById("cd-cap")
+  };
+  function pad(n) { return n < 10 ? "0" + n : String(n); }
+  function tick() {
+    var diff = target - Date.now();
+    if (diff <= 0) {
+      el.d.textContent = el.h.textContent = el.m.textContent = el.s.textContent = "00";
+      el.cap.textContent = "就是今天！謝謝你來參加我們的婚禮";
+      return false;
+    }
+    var s = Math.floor(diff / 1000);
+    el.d.textContent = Math.floor(s / 86400);
+    el.h.textContent = pad(Math.floor(s % 86400 / 3600));
+    el.m.textContent = pad(Math.floor(s % 3600 / 60));
+    el.s.textContent = pad(s % 60);
+    return true;
+  }
+  if (tick()) {
+    var id = setInterval(function () { if (!tick()) clearInterval(id); }, 1000);
+  }
+})();
+</script>
+<script>
+(function () {
+  var btn = document.getElementById("copy-addr");
+  var text = "高雄市鼓山區桃源里蓮海路90號";
+  btn.addEventListener("click", function () {
+    function done() { btn.textContent = "已複製"; setTimeout(function () { btn.textContent = "複製地址"; }, 2000); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("taxi-dest"));
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      btn.textContent = "已選取，請手動複製";
+    }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+<script>
+(function () {
+  var imgs = [];
+  var box = document.getElementById("lightbox"), big = document.getElementById("lb-img"), count = document.getElementById("lb-count");
+  var i = 0, lastFocus = null;
+  function show(n) {
+    i = (n + imgs.length) % imgs.length;
+    big.src = imgs[i].src; big.alt = imgs[i].alt;
+    count.textContent = (i + 1) + " / " + imgs.length;
+  }
+  function open(n) { lastFocus = document.activeElement; show(n); box.hidden = false; document.body.style.overflow = "hidden"; document.getElementById("lb-close").focus(); }
+  function close() { box.hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+  document.querySelectorAll(".gallery").forEach(function (panel) {
+    var list = Array.prototype.slice.call(panel.querySelectorAll("img"));
+    list.forEach(function (img, n) {
+      var fig = img.parentNode;
+      function go() { imgs = list; open(n); }
+      fig.tabIndex = 0;
+      fig.addEventListener("click", go);
+      fig.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+    });
+  });
+
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+      });
+    });
+  });
+  document.getElementById("lb-close").addEventListener("click", close);
+  document.getElementById("lb-prev").addEventListener("click", function () { show(i - 1); });
+  document.getElementById("lb-next").addEventListener("click", function () { show(i + 1); });
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (box.hidden) return;
+    if (e.key === "Escape") close();
+    else if (e.key === "ArrowLeft") show(i - 1);
+    else if (e.key === "ArrowRight") show(i + 1);
+  });
+  var x0 = null;
+  box.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener("touchend", function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1);
+  });
+})();
+</script>
+<script>
+(function () {
+  var items = Array.prototype.slice.call(document.querySelectorAll(".walk-data li"));
+  var pins = Array.prototype.slice.call(document.querySelectorAll(".pin"));
+  var img = document.getElementById("walk-img"), cur = 0;
+  function show(n) {
+    cur = (n + items.length) % items.length;
+    var it = items[cur];
+    img.src = it.dataset.src; img.alt = it.dataset.title;
+    document.getElementById("walk-num").textContent = cur + 1;
+    document.getElementById("walk-title").textContent = it.dataset.title;
+    document.getElementById("walk-desc").textContent = it.textContent.trim();
+    pins.forEach(function (p, k) { p.classList.toggle("on", k === cur); });
+  }
+  pins.forEach(function (p, k) {
+    p.addEventListener("click", function () { show(k); });
+    p.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(k); } });
+  });
+  document.getElementById("walk-prev").addEventListener("click", function () { show(cur - 1); });
+  document.getElementById("walk-next").addEventListener("click", function () { show(cur + 1); });
+  show(0);
+})();
+</script>
