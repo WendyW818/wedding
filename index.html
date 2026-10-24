@@ -257,6 +257,14 @@ section { padding-block: clamp(64px, 10vw, 112px); }
 .note svg { width: 22px; height: 22px; margin-top: 3px; stroke: var(--blue-deep); fill: none; stroke-width: 1.4; }
 .note strong { font-weight: 600; }
 
+.dress { margin-top: clamp(48px, 7vw, 72px); padding-top: clamp(36px, 5vw, 48px); border-top: 1px solid var(--rule); text-align: center; display: grid; justify-items: center; gap: 14px; }
+.swatches { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(10px, 2vw, 16px); }
+.swatches li { width: clamp(44px, 9vw, 60px); aspect-ratio: 1; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(60,45,30,.12); }
+.swatches li:first-child { box-shadow: inset 0 0 0 2px #d9cdb8; }
+.dress-zh { margin: 6px 0 0; font-size: clamp(18px, 2.6vw, 22px); font-weight: 600; letter-spacing: .14em; display: flex; flex-wrap: wrap; justify-content: center; column-gap: 1.6em; row-gap: 4px; }
+.dress-zh span { font-weight: 400; }
+.dress-en { margin: 0; font-family: var(--f-display); font-style: italic; font-size: 18px; color: var(--ink-soft); }
+
 /* ---------- Gallery ---------- */
 .tabs {
   display: flex; justify-content: center; gap: 0;
@@ -530,6 +538,19 @@ footer p { margin: 0; color: var(--ink-soft); letter-spacing: .14em; font-size: 
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="dress">
+      <span class="label">Dress Code</span>
+      <ul class="swatches" aria-label="建議服裝顏色：大地色與米色系">
+        <li style="--c:#ece4d7" title="象牙白"></li>
+        <li style="--c:#d6c6a5" title="米色"></li>
+        <li style="--c:#b18f68" title="駝色"></li>
+        <li style="--c:#85684a" title="棕色"></li>
+        <li style="--c:#5a4535" title="深咖啡"></li>
+      </ul>
+      <p class="dress-zh">大地色・米色系<span>男士若著西裝，顏色不限</span></p>
+      <p class="dress-en">Earth tones &amp; beige · suits in any color</p>
     </div>
   </div>
 </section>
