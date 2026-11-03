@@ -114,6 +114,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-
   font-size: clamp(20px, 3vw, 28px);
   margin: 0;
 }
+.hero-zh {
+  margin: 12px 0 0;
+  font-family: var(--f-body);
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: 500;
+  letter-spacing: .32em;
+  text-shadow: 0 1px 12px rgba(0,0,0,.3);
+}
+.hero-zh span { margin: 0 .5em; opacity: .8; }
 .hero-date {
   margin-top: 18px;
   font-family: var(--f-label);
@@ -434,6 +443,7 @@ footer {
 footer .names { color: var(--ink); text-shadow: none; font-size: clamp(44px, 8vw, 76px); margin: 0; }
 footer .names .amp { color: var(--blue-deep); }
 footer p { margin: 0; color: var(--ink-soft); letter-spacing: .14em; font-size: 14px; }
+footer .footer-zh { color: var(--ink); font-size: 17px; letter-spacing: .32em; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 760px) {
@@ -460,6 +470,7 @@ footer p { margin: 0; color: var(--ink-soft); letter-spacing: .14em; font-size: 
     <div class="label">Join us to celebrate</div>
     <h1 class="names">Kevin<span class="amp">&amp;</span>Wendy</h1>
     <p class="hero-sub">Wedding Party</p>
+    <p class="hero-zh">林榆承<span aria-hidden="true">・</span>吳承樺</p>
     <div class="hero-date">2026 · 11 · 28</div>
   </div>
 </header>
@@ -736,6 +747,7 @@ footer p { margin: 0; color: var(--ink-soft); letter-spacing: .14em; font-size: 
       <svg viewBox="0 0 24 24"><path d="M12 2c.9 3.6 2.4 5.1 6 6-3.6.9-5.1 2.4-6 6-.9-3.6-2.4-5.1-6-6 3.6-.9 5.1-2.4 6-6Zm0 13c.5 2 1.3 2.8 3.3 3.3-2 .5-2.8 1.3-3.3 3.3-.5-2-1.3-2.8-3.3-3.3 2-.5 2.8-1.3 3.3-3.3Z"/></svg>
     </div>
     <p class="names">Kevin<span class="amp">&amp;</span>Wendy</p>
+    <p class="footer-zh">林榆承　吳承樺</p>
     <p>2026.11.28 · 高雄 一嶼所在 二號島 西灣</p>
     <p>期待與你相見</p>
   </div>
